@@ -1,122 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio - Sri Pranav P</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            color: #fff;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #111;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-        header a:hover {
-            text-decoration: underline;
-        }
-        .logo {
-            font-size: 30px;
-            font-weight: bold;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .hero h1 {
-            font-size: 50px;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 20px;
-            color: #aaa;
-        }
-        .hero a {
-            color: #00FF00;
-            text-decoration: none;
-        }
-        .projects {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 40px;
-            background-color: #1a1a1a;
-        }
-        .project-item {
-            background-color: #333;
-            width: 30%;
-            margin-bottom: 30px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-        .project-item img {
-            width: 100%;
-            height: auto;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #111;
-            color: #aaa;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sripranav's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Header -->
-    <header>
-        <div class="logo">SP</div>
-        <nav>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>Sri Pranav P is a Electonics and Computer Engineer living in Kochi, India.</h1>
-        <p><a href="#contact">Get in touch</a> if you'd like to see some of my latest work.</p>
+  <div class="container">
+    <nav>
+      <div class="logo">modH</div>
+      <div class="links">
+        <a href="https://github.com" target="_blank">Github</a>
+        <a href="#">More</a>
+      </div>
+    </nav>
+    
+    <div class="content">
+      <h1>Hi.<br>I'm <span class="highlight">Sripranav</span>,</h1>
+      <p>a BTech undergraduate trying to <span class="strikethrough">not drown</span> navigate engineering.</p>
     </div>
-
-    <!-- Projects Section -->
-    <div class="projects" id="projects">
-        <div class="project-item">
-            <img src="https://via.placeholder.com/300x200" alt="Project 1">
-            <h3>Project 1</h3>
-        </div>
-        <div class="project-item">
-            <img src="https://via.placeholder.com/300x200" alt="Project 2">
-            <h3>Project 2</h3>
-        </div>
-        <div class="project-item">
-            <img src="https://via.placeholder.com/300x200" alt="Project 3">
-            <h3>Project 3</h3>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 Sri Pranav P. All Rights Reserved.
-    </footer>
-
+  </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
