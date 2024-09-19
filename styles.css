@@ -1,21 +1,4 @@
-/* Base styles (same as before) */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #0f0f0f;
-  color: #f0f0f0;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Prevent scrollbars from appearing */
-  position: relative; /* Ensure positioning context for absolute elements */
+  color: #0f0f0f; /* Light mode text color */
 }
 
 nav {
@@ -24,7 +7,6 @@ nav {
   right: 20px;
   display: flex;
   align-items: center;
-  font-size: 16px;
   z-index: 10; /* Ensure nav links are on top */
 }
 
@@ -40,14 +22,21 @@ nav {
   color: #58a6ff;
 }
 
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: inherit; /* Match text color */
+  margin-left: 20px; /* Spacing between links and button */
+}
+
 .container {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 1; /* Ensure container content is on top of cursor */
-  position: relative; /* Establish stacking context */
-  padding: 20px; /* Optional: Add padding to give some space around the content */
 }
 
 .content h1 {
@@ -62,54 +51,27 @@ nav {
 
 .highlight {
   color: #58a6ff;
+  position: relative;
 }
 
-.strikethrough {
-  text-decoration: line-through;
-  color: #888;
-}
-
-/* Custom cursor styles (same as before) */
-.custom-cursor {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #58a6ff;
-  pointer-events: none; /* Prevent the cursor from affecting elements */
-  transform: translate(-50%, -50%); /* Center cursor on the mouse */
-  transition: width 0.3s, height 0.3s, background-color 0.3s, opacity 0.3s;
-  z-index: 5; /* Ensure cursor is below text */
-}
-
-.custom-cursor.enlarge {
-  width: 30px; /* Enlarged cursor size */
-  height: 30px; /* Enlarged cursor size */
-}
-
-.custom-cursor.transparent {
-  opacity: 0.5; /* Semi-transparent cursor */
-}
-
-.custom-cursor:hover {
-  background-color: #f0f0f0; /* Change color on hover */
-  opacity: 1; /* Fully opaque on hover */
+.highlight:hover {
+  text-shadow: 0 0 10px rgba(88, 166, 255, 0.7), 0 0 20px rgba(88, 166, 255, 0.5);
 }
 
 /* Typing animation styles */
 .animated-text {
   display: inline-block;
   font-weight: bold;
-  border-right: 4px solid #58a6ff; /* Cursor effect */
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+  border-right: 4px solid #58a6ff; /* Visible cursor */
+  animation: blink-caret 0.75s step-end infinite; /* Blink cursor */
 }
 
 /* Keyframes for typing effect */
 @keyframes typing {
   from { width: 0; }
-  to { width: 15em; } /* Adjust width to fit the text */
+  to { width: 100%; } /* Adjusts to text length */
 }
 
 @keyframes blink-caret {
